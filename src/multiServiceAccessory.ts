@@ -30,6 +30,7 @@ import { TelevisionService } from './services/televisionService';
 import { VolumeSliderService } from './services/volumeSliderService';
 import { Command } from './services/smartThingsCommand';
 import { CrashLoopManager, CrashErrorType } from './auth/CrashLoopManager';
+import { ZigbangSmartDoorlockService } from './services/zigbangSmartDoorlockService';
 // type DeviceStatus = {
 //   timestamp: number;
 //   //status: Record<string, unknown>;
@@ -62,6 +63,7 @@ export class MultiServiceAccessory {
   private static capabilityMap = {
     'doorControl': DoorService,
     'lock': LockService,
+    'absoluteweather46907.lock': ZigbangSmartDoorlockService,
     'switch': SwitchService,
     'windowShadeLevel': WindowCoveringService,
     'windowShade': WindowCoveringService,
